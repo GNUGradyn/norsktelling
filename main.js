@@ -20,6 +20,7 @@ const normalize = (str) => str
     .replaceAll("–", "")
     .replaceAll("—", "")
     .replaceAll(",", "")
+    .replace(/^en(?=hundre|tusen|million|milliard)/, "")
     .replaceAll("og", ""); // Allow omitting og
 
 const getRandInRange = () => Math.floor(Math.random() * 1000000);
