@@ -7,21 +7,21 @@ let mode = "seq";
 let displayMode = "words";
 
 const normalize = (str) => str
-    .toLowerCase()
-    .trim()
-    .replaceAll(" ", "")
-    .replaceAll("ett", "en")
-    .replaceAll("syv", "sju")
-    .replaceAll("tyve", "tjue")
-    .replaceAll("aa", "å")
-    .replaceAll("ae", "æ")
-    .replaceAll("oe", "ø")
-    .replaceAll("-", "")
-    .replaceAll("–", "")
-    .replaceAll("—", "")
-    .replaceAll(",", "")
-    .replace(/^en(?=hundre|tusen|million|milliard)/, "")
-    .replaceAll("og", ""); // Allow omitting og
+        .toLowerCase()
+        .trim()
+        .replace(/^en\s+/, "")
+        .replaceAll(" ", "")
+        .replaceAll("ett", "en")
+        .replaceAll("syv", "sju")
+        .replaceAll("tyve", "tjue")
+        .replaceAll("aa", "å")
+        .replaceAll("ae", "æ")
+        .replaceAll("oe", "ø")
+        .replaceAll("-", "")
+        .replaceAll("–", "")
+        .replaceAll("—", "")
+        .replaceAll(",", "")
+        .replace(/\bog\b/g, "")
 
 const getRandInRange = () => Math.floor(Math.random() * 1000000);
 const getModeButtons = () => document.getElementById("mode").getElementsByClassName("selector-button");
