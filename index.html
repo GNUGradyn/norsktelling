@@ -10,7 +10,18 @@
     </head>
     <body>
         <h1 id="header">Norsktelling</h1>
-        <h3 id="eng-num">zero</h3>
+        <div id="settings">
+            <div id="mode" class="selector">
+                <span class="selector-button" data-mode="seq">Sequential</span>
+                <span class="selector-button" data-mode="pot">Powers of 10</span>
+                <span class="selector-button" data-mode="rand">Random up to 1M</span>
+            </div>
+            <div id="display-mode" class="selector">
+                <span class="selector-button" data-mode="words">Show written words</span>
+                <span class="selector-button" data-mode="digits">Show digits</span>
+            </div>
+        </div>
+        <h3 id="eng-num"></h3>
         <input id="no-num"/>
         <p>Aliases for non norwegian keyboards</p>
         <table>

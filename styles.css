@@ -26,3 +26,26 @@ td {
     height: 50px;
     width: 50px;
 }
+
+.selector {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    align-self: center;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.selector-button {
+    padding: 7px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.selector-button.selected {
+    background-color: gray;
+}
