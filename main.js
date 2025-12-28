@@ -21,7 +21,8 @@ const normalize = (str) => str
         .replaceAll("–", "")
         .replaceAll("—", "")
         .replaceAll(",", "")
-        .replace(/\bog\b/g, "")
+        .replaceAll("èn", "en")
+        .replace(/\bog\b/g, "");
 
 const getRandInRange = () => Math.floor(Math.random() * 1000000);
 const getModeButtons = () => document.getElementById("mode").getElementsByClassName("selector-button");
