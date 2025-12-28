@@ -1,0 +1,28 @@
+body {
+    font-family: Arial;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#header {
+    margin-top: 10%
+}
+#no-num {
+    padding: 2px
+}
+td, tr, table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    width: 50px;
+}
+
+#github-mark {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 50px;
+}
